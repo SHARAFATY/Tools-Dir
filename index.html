@@ -42,7 +42,7 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
   <script>
-    const sheetUrl = "https://docs.google.com/spreadsheets/d/1Sb0ySTSR-xvb1Ir5jT41XA13FCwYCpQTbxdpgt5VIk4/export?format=csv";
+    const sheetUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRvpzfLjCqOO1GsGfX6RBl56ln2q6dvVt9lLVmU7N5hPqRH49KShlw-0P7BcVpef2R8hWdNXKB-Fuwo/pub?output=csv";
     const portfolioLink = "https://quicksilver-lab.github.io";
     function fetchCSV(){Papa.parse(sheetUrl,{download:true,header:true,skipEmptyLines:true,transformHeader:header=>header.trim(),complete:function(results){displayCards(results.data);document.getElementById("loader").style.display="none";},error:function(error){console.error(error);document.getElementById("loader").style.display="none";}});}
     function displayCards(data){
